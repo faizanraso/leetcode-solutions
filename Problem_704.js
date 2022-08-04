@@ -1,3 +1,5 @@
+//704. Binary Search
+
 // Binary Search
 var search = function (nums, target) {
     var maxIndex = nums.length - 1;
