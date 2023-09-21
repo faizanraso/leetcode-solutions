@@ -21,3 +21,22 @@
     }
 
 };
+
+
+/**
+ Do not return anything, modify nums in-place instead.
+ */
+ function moveZeroes(nums: number[]): void {
+    if(nums.length == 1) return
+    let originalLength = nums.length
+    let iterations = 0;
+    for(let i = 0; i < originalLength; i++){
+        if(iterations > originalLength) break;
+        if(nums[i] === 0){
+            nums.splice(i, 1);
+            nums.push(0);
+            i--;
+        }
+        iterations++;
+    }
+};
